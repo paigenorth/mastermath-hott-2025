@@ -28,7 +28,7 @@ Proof.
 
 (* From here on, all `Admitted.`s should be filled in. *)
 
-(* Exercise 1 *)
+(* Exercise 2 *)
 
 (* Here we give a solution to Exercise 3 from the last homework, so that you can prove something about it in this Exercise.*)
 Theorem exp : nat → nat → nat.
@@ -50,21 +50,21 @@ Theorem exp_hom {l m n : nat} : exp l (m + n) = (exp l m) * (exp l n).
 Proof.
   Admitted.
 
-(* Exercise 2 *)
+(* Exercise 3 *)
 
 Lemma path_combination {A : UU} {a a' b : A} (p : a = b) (q: a' = b) : a = a'.
 (* Another way to combine paths. *)
 Proof.
   Admitted.
 
-(* Exercise 3 *)
+(* Exercise 4 *)
 
 Lemma path_combination_fact {A : UU} {a b : A} (p : a = b) : idpath a = path_combination p p.
 (* Check that the above way of combining paths does the `right thing'. *)
 Proof.
   Admitted.
 
-(* Exercise 4 *)
+(* Exercise 5 *)
 
 (* isaprop is defined differently in UniMath than we in class in lecture 5. (It will become clear later why.) We haven't learned yet what isofhlevel means, but we do know what iscontr means. *)
 
@@ -80,7 +80,7 @@ Theorem prop_thm {P : UU} : isaprop P <-> (∏ x y : P, x = y).
 Proof.
   Admitted.
 
-(* Exercise 5 *)
+(* Exercise 6 *)
 
 (* NB: The prefered defintion of equivalence in the UniMath library is `isweq`: it says the fibers are contractible.
 You are allowed to use isweq_iso from the library in this proof: it says if f is a quasiequivalence, then f is an equivalence in that sense.*)
