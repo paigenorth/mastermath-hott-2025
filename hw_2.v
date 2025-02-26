@@ -1,3 +1,4 @@
+Unset Universe Checking.
 Require Export UniMath.Foundations.All.
 
 (* Exercise 1 *)
@@ -68,6 +69,8 @@ Proof.
 
 (* isaprop is defined differently in UniMath than we in class in lecture 5. (It will become clear later why.) We haven't learned yet what isofhlevel means, but we do know what iscontr means. *)
 
+Check isaprop.
+Print isaprop.
 Lemma trivial_prop_lem (P : UU) : isaprop P = ∏ x y : P, iscontr (x = y).
 Proof.
   unfold isaprop.
