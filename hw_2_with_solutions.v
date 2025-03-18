@@ -1,3 +1,4 @@
+Unset Universe Checking.
 Require Export UniMath.Foundations.All.
 
 (* Exercise 1 *)
