@@ -9,6 +9,8 @@ Require Import UniMath.NumberSystems.All.
 (** * Preliminaries * **)
 (**                   **)
 
+Section l9.
+
 Variable funext : funextsecStatement.
 
 (** Generalisation of [maponpaths] to dependent functions. *)

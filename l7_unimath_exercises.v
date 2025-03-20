@@ -5,6 +5,8 @@ Require Export UniMath.Foundations.All.
 
 (* Propositional truncation is defined slightly differently in UniMath than how I defined it. Show that it has the same properties in the next few exercises. *)
 
+Section l7.
+
 Variable ua : univalenceStatement.
 
 Variable funext : funextsecStatement.
