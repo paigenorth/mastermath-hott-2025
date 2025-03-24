@@ -1,6 +1,6 @@
+Unset Universe Checking.
 Require Export UniMath.Foundations.All.
 Require Export UniMath.MoreFoundations.Univalence.
-Unset Universe Checking.
 
 (* You can use any result from previous homeworks, exercises, or lectures without proof.*)
 
