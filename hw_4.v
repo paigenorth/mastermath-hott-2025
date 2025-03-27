@@ -1,6 +1,6 @@
 Unset Universe Checking.
 Require Export UniMath.Foundations.All.
-Require Export UniMath.MoreFoundations.Univalence.
+Require Export UniMath.MoreFoundations.All.
 
 (* You can use any result from previous homeworks, exercises, or lectures without proof.*)
 
@@ -28,4 +28,4 @@ Definition PtdUU := ∑ T : UU, T.
 (* Exercise 5 *)
 
 (* Show univalence for the universe of pointed types, i.e. that the function defined in Exercise 4 induces an equivalence. *)
-(* Note: This is quite harder than all previous exercises! *)
+(* Note: This is quite harder than all previous exercises! You can use any lemma defined in the imported files *)
