@@ -256,23 +256,16 @@ Defined.
 
 Definition comp {C : Cat} {X Y Z : Ob C} (f : Hom X Y) (g : Hom Y Z) : Hom X Z.
 Proof.
-  induction C.
-  induction pr2.
-  induction pr2.
-  induction pr3.
-  unfold CatComp in pr3.
-  exact (pr3 X Y Z f g).
+  induction C as [Ob [Hom [idmor [comp [catidleft rest]]]]].
+  exact (comp X Y Z f g).
 Defined.
 
 Notation "f ∘ g" := (comp f g).
 
 Definition idmor {C : Cat} (X : Ob C) : Hom X X.
 Proof.
-  induction C.
-  induction pr2.
-  induction pr2.
-  unfold CatId in pr2.
-  exact (pr2 X).
+  induction C as [Ob [Hom [idmor [comp [catidleft rest]]]]].
+  exact (idmor X).
 Defined.
 
 Notation "𝟙 X" := (idmor X) (at level 10).
@@ -284,6 +277,7 @@ Notation "X ≅ Y" := (∑ f : Hom X Y, isiso f).
 
 Definition id_to_iso_cat {C : Cat} (X Y : Ob C) : (X = Y) → (X ≅ Y).
 Proof.
+  induction C as [Ob [Hom [idmor [comp [catidleft rest]]]]].
   intro e.
   induction e.
   use tpair.
@@ -292,7 +286,6 @@ Proof.
     use tpair.
     + exact (𝟙 X).
     + simpl.
-      induction C as [Ob [Hom [idmor [comp [catidleft rest]]]]].
       split.
       * apply catidleft.
       * apply catidleft.
